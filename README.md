@@ -35,6 +35,6 @@
 
 15. Como paso final verifiqué los comandos anteriores con `php -m | grep pgsql` para ver lo de php y `sudo systemctl status apache2` para ver el servicio de apache.
 
-- para subir los archivos al repositorio priemro inicie sesion en github desde la shell y use `git add [nombre del achivo a subir]`, luego `git commit -m "mensaje de lo que se va a documentar"` y lo subia con `git push` 
+- para subir los archivos al repositorio priemro inicie sesion en github desde la shell y use `git add .`, luego `git commit -m "Archivo luego de realizar el reto"` y lo subia con `git push origin main` 
 
 # Las capturas de pantalla estan en el repositorio de github
