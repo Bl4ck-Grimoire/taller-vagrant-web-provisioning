@@ -4,6 +4,7 @@ Vagrant.configure("2") do |config|
     web.vm.box = "ubuntu/focal64"
     web.vm.hostname = "web"
     web.vm.network "private_network", ip: "192.168.56.22"
+    web.vm.synced_folder "./www", "/var/www/html"
     web.vm.provision "shell", path: "provision-web.sh"
   end
 
