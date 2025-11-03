@@ -38,10 +38,10 @@
 - para subir los archivos al repositorio priemro inicie sesion en github desde la shell y use `git add .`, luego `git commit -m "Archivo luego de realizar el reto"` y lo subia con `git push origin main` 
 
 # Imagen de la pagina html
-![Hola uwu](Pagina_web.jpeg)
+!(Pagina_web.jpeg)
 
 # Imagen del info.php
-![Hola uwu](Archivo_php.jpeg)
+!(Archivo_php.jpeg)
 
 # Imagen de la conección entre las maquinas virtuales
-![Hola uwu](Verificación_de_la_db_desde_web.jpeg)
+!(Verificación_de_la_db_desde_web.jpeg)
