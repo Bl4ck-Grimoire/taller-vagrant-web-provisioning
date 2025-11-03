@@ -1,8 +1,22 @@
 # Taller Vagrant + Provisionamiento con Shell
 
-## Juan David Lasso Chaparro
+# Juan David Lasso Chaparro
 
-## Pasos par realizar el reto
+# Pasos para hacer el taller
+
+1. hay que tener instalado Oracle virtualbox, Vagrant y Git.
+
+2. Fui al link dentro del word y con mi cuenta de github hice un fork al repositorio, luego creé una carpeta donde haria el taller, dentro de esta abri un cmd y puse este comando para clonar el repositorio localmente `git clone https://github.com/Bl4ck-Grimoire/taller-vagrant-web-provisioning.git`.
+
+3. Abri visual studio code y añadi la carpeta creada anteriormente, y modifique las IP de las maquinas virtuales en el Vagrantfile (192.168.56.22 para web y 192.168.56.23 para db).
+
+4. Inicié las maquinas virtuales y me meti a web con `vagrant ssh web` y procedi a poner todos los comandos que en este archivo habian.
+
+5. Desde visual modifique el html poniendole mi nombre y verifique que podia acceder a el con `http://192.168.56.22/`.
+
+6. Como paso final modifiqué el archivo info.php poniendole mi nombre y lo subi con git add, commit y push (explicado más adelante). Este no fue necesario configurarlo debido a que ya estaba conectado con el html.
+
+# Pasos par realizar el reto
 --- esto luego de realizar todo lo anterior al reto ---
 
 1. Creé el `provision-db.sh` el cual contiene la instalación y configuración de postgre.
@@ -31,7 +45,7 @@
 
 13. Luego me sali del shell de la db con `exit`, me dejo en web, alli puse `sudo apt-get update -y` para actualizar y `sudo apt-get install -y apache2 php libapache2-mod-php php-pgsql` me sirvio para instalar lo que necesitaba de php y su conexion con apache.
 
-14. Usando `sudo systemctl enable apache2` activé el servicio de apache para posteriormente iniciarlo con `sudo systemctl start apache2`. copie los archivos de una carpeta a otra con `sudo cp -r /vagrant/www/* /var/www/html/`.
+14. Usando `sudo systemctl enable apache2` activé el servicio de apache para posteriormente iniciarlo con `sudo systemctl start apache2`. Copie los archivos de una carpeta a otra con `sudo cp -r /vagrant/www/* /var/www/html/`.
 
 15. Como paso final verifiqué los comandos anteriores con `php -m | grep pgsql` para ver lo de php y `sudo systemctl status apache2` para ver el servicio de apache.
 
